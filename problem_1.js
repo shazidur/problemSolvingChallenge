@@ -12,17 +12,6 @@
 
 // Coder Name: Shazidur Rahman
 
-let inputNumber = prompt(' Please input your number here :')
-
-typeOfNUmber(inputNumber);
-
-function typeOfNUmber(number){
-    if (number%2 == 0) {
-        alert( `your number is ${number} and it is an Even number.. `)
-    } else {
-        alert(`your number is ${number} and it is an Odd number.. yaa hoo `)
-    }
-}
 
 
 
