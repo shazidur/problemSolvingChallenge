@@ -1,6 +1,6 @@
 // problem type : easy
 // problem link https://www.hackerrank.com/challenges/compare-the-triplets/problem
-
+/*
 const a = [5, 9, 10, 33];
 const b = [3, 6, 11, 44];
 
@@ -61,3 +61,34 @@ for (let i = 0; i < arrayLength; i++) {
 
 const diffrent = Math.abs(primaryDiagonal - secondaryDiagonal); // Result here
 // return diffrent
+*/
+//-----------------------------------------------------------------------------------
+
+// Title :  Plus Minus
+// problem_6 : https://www.hackerrank.com/challenges/plus-minus/problem
+
+const arr = [2, 3, 4, -4, 0, -9, 0, 12];
+let positiveNumber = 0;
+let negativeNumber = 0;
+let zero = 0;
+let arrLength = arr.length;
+
+for (let newArray of arr) {
+  if (newArray > 0) {
+    positiveNumber += 1;
+  }
+  if (newArray < 0) {
+    negativeNumber += 1;
+  }
+  if (newArray == 0) {
+    zero += 1;
+  }
+}
+
+// calculation
+let positiveRatio = positiveNumber / Math.floor(arrLength);
+console.log("positiveRatio", positiveRatio);
+
+console.log("positiveNumber : ", positiveNumber);
+console.log("negativeNumber : ", negativeNumber);
+console.log("zero : ", zero);
