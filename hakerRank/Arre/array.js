@@ -67,28 +67,52 @@ const diffrent = Math.abs(primaryDiagonal - secondaryDiagonal); // Result here
 // Title :  Plus Minus
 // problem_6 : https://www.hackerrank.com/challenges/plus-minus/problem
 
-const arr = [2, 3, 4, -4, 0, -9, 0, 12];
-let positiveNumber = 0;
-let negativeNumber = 0;
-let zero = 0;
-let arrLength = arr.length;
+const arr = [-4, 3, -9, 0, 4, 1];
+const ok = 23;
 
-for (let newArray of arr) {
-  if (newArray > 0) {
-    positiveNumber += 1;
+function myFunction(arr) {
+  let positiveNumber = 0;
+  let negativeNumber = 0;
+  let zero = 0;
+  let arrLength = arr.length;
+
+  for (let newArray of arr) {
+    if (newArray > 0) {
+      positiveNumber += 1;
+    }
+    if (newArray < 0) {
+      negativeNumber += 1;
+    }
+    if (newArray == 0) {
+      zero += 1;
+    }
   }
-  if (newArray < 0) {
-    negativeNumber += 1;
+  function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
   }
-  if (newArray == 0) {
-    zero += 1;
-  }
+
+  // calculation
+  let positiveRatio = (positiveNumber / arrLength).toFixed(6);
+  let negativeRatio = (negativeNumber / arrLength).toFixed(6);
+  let zeroRatio = (zero / arrLength).toFixed(6);
+
+  return log(positiveRatio, negativeRatio, zeroRatio);
 }
 
-// calculation
-let positiveRatio = positiveNumber / Math.floor(arrLength);
-console.log("positiveRatio", positiveRatio);
+console.log("this is the result --->> ", myFunction(arr));
 
-console.log("positiveNumber : ", positiveNumber);
-console.log("negativeNumber : ", negativeNumber);
-console.log("zero : ", zero);
+// var name = "shazid";
+// var obj = {
+//   name: "shazudur Rahma",
+//   showName: function () {
+//     console.log(this.name);
+//     setTimeout(function () {
+//       console.log(this.name);
+//     }, 2000);
+//   },
+// };
+
+// obj.showName();
+// console.log(showName.name);
